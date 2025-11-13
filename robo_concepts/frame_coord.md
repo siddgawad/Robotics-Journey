@@ -11,3 +11,17 @@ So to convert robot fram coordinate to world frame -
 2. Multiply: Pw = T* Pr;
 3. World coordinatres are the first two entries of Pw 
 
+Now- to get world coordibnates of a robot-frame poiunt we rotate byt theta and add (x,y)
+
+let us say robot pose in world is x,y,theta and robot frame poiunt is xr,yr 
+
+Rotate by θ:
+
+𝑥' = cos𝜃⋅𝑥𝑟−sin𝜃⋅𝑦𝑟
+
+y' = sin𝜃⋅𝑥𝑟+cos𝜃⋅𝑦𝑟
+
+then translate by x,y
+
+xw= x'+x = cos𝜃⋅𝑥𝑟−sin𝜃⋅𝑦𝑟+x
+yw = sin𝜃⋅𝑥𝑟+cos𝜃⋅𝑦𝑟+y
